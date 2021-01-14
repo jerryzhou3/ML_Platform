@@ -14,7 +14,8 @@ import pandas as pd
 
 API_KEY = None
 with open('api_key', 'r') as f:
-    API_KEY = f.readline()
+    json_content = f.read()
+    API_KEY = json.loads(json_content)['alphavantage']
 
 
 # In[3]:
